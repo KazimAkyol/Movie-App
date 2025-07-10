@@ -6,16 +6,16 @@ import Navbar from "../components/Navbar";
 import { Route, Routes } from "react-router-dom";
 
 const AppRouter = () => {
-  return (
-    <>
-      <Navbar />
-      <Routes>
-        <Route path="/" element={<Main />} />
-        <Route path="/login" element={<Login />} />
-        <Route path="/register" element={<Register />} />
-      </Routes>
-    </>
-  );
+    return (
+        <>
+            <Navbar />
+            <Routes>
+                <Route path="/" element={<Main />} />
+                <Route path="/login" element={<Login />} />
+                <Route path="/register" element={<Register />} />
+            </Routes>
+        </>
+    );
 };
 
 export default AppRouter;

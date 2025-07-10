@@ -11,20 +11,20 @@ const BASE_URL = `https://api.themoviedb.org/3/discover/movie?api_key=${API_KEY}
 //? bu sayfa https://api.themoviedb.org adresine üye olup film afişlerini bir diziye attığımız context sayfası
 
 const MovieContext = ({ children }) => {
-  const [filmler, setFilmler] = useState([]);
+    const [filmler, setFilmler] = useState([]);
 
-  const getirMovies = () => {
-    axios.get(BASE_URL).then((res) => setFilmler(res.data.results));
-  };
+    const getirMovies = () => {
+        axios.get(BASE_URL).then((res) => setFilmler(res.data.results));
+    };
 
-  useEffect(() => {
-    getirMovies();
-  }, []);
-  //
+    useEffect(() => {
+        getirMovies();
+    }, []);
+    //
 
-  return (
-    <FilmContext.Provider value={{ filmler }}>{children}</FilmContext.Provider>
-  );
+    return (
+        <FilmContext.Provider value={{ filmler }}>{children}</FilmContext.Provider>
+    );
 };
 
 export default MovieContext;
